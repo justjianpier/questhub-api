@@ -19,7 +19,7 @@ class WishlistItem(models.Model):
         related_name='items'
     )
     game = models.ForeignKey(
-        'game.Game',
+        'games.Game',
         on_delete=models.CASCADE
     )
     added_at = models.DateTimeField(auto_now_add=True)

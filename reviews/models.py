@@ -17,11 +17,11 @@ class Review(models.Model):
         validators=[MinValueValidator(0), MaxValueValidator(5)]
     )
     comment = models.TextField(blank=True)
-    create_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
     class Meta:
-        contraints = [
+        constraints = [
             models.UniqueConstraint(fields=['user', 'game'], name='unique_user_game')
         ]
         ordering = ['-created_at']
