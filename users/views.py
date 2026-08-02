@@ -26,7 +26,7 @@ class RegisterView(generics.CreateAPIView):
 class LoginView(TokenObtainPairView):
     serializer_class = CustomTokenObtainPairSerializer
     
-@extend_schema(tags='Autenticación')
+@extend_schema(tags=['Autenticación'])
 @extend_schema_view(
     get=extend_schema(
         summary='Obtener perfil',
